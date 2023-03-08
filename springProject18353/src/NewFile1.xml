@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id = "adrsObj" class = "springProject18353.basics.Address"></bean>
+      
+        <!--  name , age, adrs,  -->
+        
+        <!--  autowire = "byName" , attr name and obj name should be same-->      
+        <!--  autowire = "byType">  what i want Address typ obj , is it available yes so i will take it-->
+        <!--  bytpe will never check attr name and obj name are same -->
+        <bean id = "mathObj" class = "springProject18353.basics.MathTeacher" autowire = "constructor">
+        <property name = "name" value = "janani"/>
+        <property name = "age" value = "29"/>
+        </bean>
+</beans>

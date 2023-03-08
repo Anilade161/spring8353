@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<bean id = "adrsObj" class = "springProject18353.basics.Address"></bean>
+	<!-- <bean id = "science" class = "springProject18353.basics.ScienceTeacher"> 
+		<property name = "teacherName" value = "janani"/> setter ij=nject </bean> -->
+	<bean id="math" class="springProject18353.basics.MathTeacher">
+		<property name="name" value="priya"/>
+		<property name="age" value="29"/> 
+		 <property name="adrs"   ref = "adrsObj">
+		<!-- 	<bean class="springProject18353.basics.Address"></bean>   -->
+		</property>
+	</bean>
+
+
+<bean id="math1" class="springProject18353.basics.MathTeacher">
+		<property name="name" value="suriya"/>
+		<property name="age" value="30"/> 
+		<property name="adrs"  ref = "adrsObj">
+			<!-- <bean class="springProject18353.basics.Address"></bean>  -->
+		</property>
+	</bean>
+
+	<!-- <bean id="science" class="springProject18353.basics.ScienceTeacher"> 
+		<constructor-arg name="teacherName" value="janani"></constructor-arg> </bean> -->
+
+	<!-- <bean id = "math" class = "springProject18353.basics.MathTeacher"> 
+		<constructor-arg name = "name" value = "priya"></constructor-arg> <constructor-arg 
+		name = "age" value = "29"></constructor-arg> </bean> -->
+</beans>
